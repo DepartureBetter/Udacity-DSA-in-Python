@@ -1,5 +1,18 @@
 def binarySearch(array, value):
 	lower = 0
+	upper = len(array/2)
+	while lower <= upper:
+		mid = (lower + upper) / 2
+		if array[mid] < value:
+			lower += mid + 1
+		elif array[mid] > value:
+			upper = mid - 1
+		else:
+			return mid
+	return -1
+
+def binarySearch(array, value):
+	lower = 0
 	upper = len(array) - 1
 	while lower <= upper:
 		mid = (lower + upper) / 2
